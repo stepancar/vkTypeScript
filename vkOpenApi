@@ -18,7 +18,7 @@ interface IVKUI {
 interface IVK {
     Init: (params: { apiId: number }) => void;
     Auth: IVKAuth;
-    Api: IVKApi;
+    api: (method: string, params: {  }, callback: (data) => void) => void;
     Observer: IVKObserver;
     UI: IVKUI
 }
